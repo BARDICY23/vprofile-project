@@ -1,0 +1,11 @@
+#! /bin/bash
+gcloud compute instances create nexus-server \
+  --zone=us-central1-a \
+  --machine-type=e2-standard-4 \
+  --boot-disk-size=50GB \
+  --boot-disk-type=pd-ssd \
+  --image-family=centos-stream-9 \
+  --image-project=centos-cloud \
+  --tags=nexus-server,ssh \
+  --metadata-from-file=startup-script=../startup-scripts/nexus.sh
+
