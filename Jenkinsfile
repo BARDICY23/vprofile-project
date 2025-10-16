@@ -18,7 +18,7 @@ pipeline {
     }
 
     stages {
-        stage('Build'){
+        stage('Buildd'){
             steps {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
