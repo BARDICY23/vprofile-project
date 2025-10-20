@@ -84,5 +84,17 @@ pipeline {
                 sh "docker push $IMAGE_NAME"
             }
         }
+
+        stage('Deploy to Cloud Run') {
+            steps {
+                sh """
+                gcloud run deploy vprofile-app \
+                    --image $IMAGE_NAME \
+                    --region $REGION \
+                    --platform managed \
+                    --allow-unauthenticated
+                """
+            }
+        }
     }
 }
