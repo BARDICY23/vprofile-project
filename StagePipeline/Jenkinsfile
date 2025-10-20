@@ -63,7 +63,7 @@ pipeline {
             }
         }
 
-        stage('Autheenticate with GCP') {
+        stage('Authenticate with GCP') {
             steps {
                 sh '''
                 gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
