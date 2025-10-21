@@ -14,7 +14,7 @@ This project deploys a **simple web page**, originally part of a larger applicat
 - **GitHub** – Source code management and Jenkins webhook trigger  
 - **Maven** – Build and dependency management tool  
 ---
-## ⚙️ CI/CD Workflow (Accurate to Jenkinsfile)
+## ⚙️ CI/CD Workflow
 1. **Code Push (GitHub)** – A commit to the `jenkins-cicd` branch triggers Jenkins automatically via a GitHub webhook.  
 2. **Build Stage** – Jenkins runs `mvn -s settings.xml -DskipTests install`, builds the WAR package, and archives artifacts.  
 3. **Test Stage** – Runs unit tests using Maven.  
