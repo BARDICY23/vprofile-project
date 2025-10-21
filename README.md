@@ -43,11 +43,10 @@ This project deploys a **simple web page**, originally part of a larger applicat
 ---
 ## 📂 Repository Structure
 ```
-vprofile-project/
-├── Jenkinsfile                 # Full CI/CD pipeline definition
+CI/CD/
 ├── Docker-files/               # Dockerfiles for app, db, web
 ├── gcloud-cli-setup/           # Scripts for VM, IAM, and firewall setup
-├── StagePipeline/              # Jenkins pipeline & helper scripts
+├── prodPipeline/               # Jenkins pipeline & helper scripts
 ├── src/                        # Application source code
 ├── pom.xml                     # Maven build configuration
 ├── settings.xml                # Maven settings for Nexus credentials
@@ -55,25 +54,17 @@ vprofile-project/
 ```
 ---
 ## 🧠 Key Learnings
-- Building an end-to-end CI/CD pipeline with **Jenkins + SonarQube + Nexus + Cloud Run**  
-- Uploading artifacts to Nexus before Dockerization  
-- Secure GCP authentication in Jenkins with service account keys  
-- Managing builds, tests, and quality gates efficiently  
-- Automated deployments to a fully managed environment (Cloud Run)  
----
-## 📸 Suggested Screenshots
-If you want to make it visual, include:  
-- ✅ Jenkins pipeline stages (successful run)  
-- ✅ SonarQube Quality Gate dashboard  
-- ✅ Nexus repository showing uploaded artifact  
-- ✅ GCP Artifact Registry image page  
-- ✅ Cloud Run service page (URL + “Active” status)  
+- Building a full CI/CD pipeline from scratch that connects Jenkins, SonarQube, Nexus, and GCP together.  
+- Managing multiple servers on GCP and configuring networking, firewall rules, and access between them.  
+- Automating the entire delivery process — from building the code to deploying the container on Cloud Run.  
+- Integrating quality checks and artifact management into a real deployment pipeline.  
+- Gaining deep hands-on experience with Jenkins pipelines, Docker, and GCP services working together. 
 ---
 ## 👨‍💻 Author
 **Ahmed Mohamed Saad Elbardisy**  
 DevOps & Cloud Enthusiast | Suez Canal University  
 📧 ahmedelbardicy18@gmail.com  
-🔗 [GitHub](https://github.com/BARDICY23) | [LinkedIn](https://www.linkedin.com/in/ahmed-elbardisy/)  
+🔗 [GitHub](https://github.com/BARDICY23) | [LinkedIn](https://www.linkedin.com/in/ahmed-elbardisy/)  | [portfolio](https://portfolio.dark-lord.xyz)
 ---
 ## 🏁 License
 This project is for educational and demonstration purposes only.
