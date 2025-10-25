@@ -1,0 +1,9 @@
+#! /bin/bash
+gcloud compute firewall-rules create allow-http-priv \
+  --direction=INGRESS \
+  --priority=1000 \
+  --network=default \
+  --action=ALLOW \
+  --rules=tcp:80 \
+  --source-ranges=156.206.185.18/32\
+  --target-tags=sonarqube-server

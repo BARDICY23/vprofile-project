@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Get current public IP
+MY_IP=$(curl -s ifconfig.me)
+
+# Get all firewall rules ending with 'priv'
+RULES=$(gcloud compute firewall-rules list --format="value(name)" | grep 'priv$')
+
+# Update each rule
+for RULE in $RULES; do
+    echo "Updating $RULE with IP ${MY_IP}/32..."
+    gcloud compute firewall-rules update $RULE \
+        --source-ranges=${MY_IP}/32
+done
+
+echo "✅ All firewall rules ending with 'priv' updated to ${MY_IP}/32"
+

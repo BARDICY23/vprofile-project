@@ -1,0 +1,9 @@
+#! bin/bash
+gcloud compute instances create jenkins-server \
+  --zone=me-central1-a \
+  --machine-type=e2-standard-4 \
+  --image-family=debian-12 \
+  --image-project=debian-cloud \
+  --boot-disk-size=20GB \
+  --tags=jenkins-server,ssh \
+  --metadata-from-file=startup-script=../startup-scripts/jenkins.sh
